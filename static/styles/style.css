@@ -30,9 +30,6 @@ button:not([disabled]) {
 /**************/
 /*** BASICS ***/
 /**************/
-html {
-  background-color: hotpink;
-}
 h1 {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;

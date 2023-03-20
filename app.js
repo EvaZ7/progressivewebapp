@@ -31,9 +31,10 @@ function fetchData() {
   // .then((data) => {
   //   console.log(data)
   //   const dailyquote = data[0].quote
+  //   // res.render("index", { dailyquote })
+  //   res.render('main', {layout : 'index', dailyquote})
   //   });
-  // res.render("test", { dailyquote })
-   res.render("test")
+    res.render('main', {layout : 'index'})
 });
 
 app.listen(port, () => {
