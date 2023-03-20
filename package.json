@@ -1,0 +1,25 @@
+{
+  "name": "progressivewebapp",
+  "version": "1.0.0",
+  "description": "![Frontpage](https://github.com/EvaZ7/Quotes/blob/4b05094b8fa3c4556e8e3799aaa9f918216d75d5/readmeimg/amazed.png)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvaZ7/progressivewebapp.git"
+  },
+  "type": "module",
+  "author": "Eva Zaadnoordijk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvaZ7/progressivewebapp/issues"
+  },
+  "homepage": "https://github.com/EvaZ7/progressivewebapp#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.2",
+    "node-fetch": "^3.3.1"
+  }
+}
