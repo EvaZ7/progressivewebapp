@@ -8,33 +8,20 @@ router.get('/', (req, res) => {
 
         const url1 = `https://api.api-ninjas.com/v1/quotes?category=${category}&limit=10`;
         const options = {
-          headers: { "X-Api-Key": "mr1axNSXq9DjWUuEBQUHGA==YK6lI63UGnsVpLyt" },
+          headers: { "X-Api-Key": "/5N2hL8Fe0A2oo6WGAKRSA==46hArJjLsGo4zWLC" },
         };
       
         return axios.get(url1, options).catch((err) => console.log('@@-- err', err))
-        
-        
-        // (url1, options).then((response) => {
-        //   if (response.status >= 200 && response.status <= 299) {
-        //     return response.json();
-        //   } else {
-        //     throw Error(response.statusText);
-        //   }
-        // });
       }
       fetchData()
       .then((data) => {
         // console.log(data.data)
         const filter = data.data;
         console.log('@@-- filter', filter)
-        // filter.forEach((quote) => {
-        //     console.log(quote.quote);
-        //     const oneQuote = quote.quote;
-        // });
-        // console.log('@@-- dailyQuote', dailyQuote)
-        // res.render('main', {layout : 'index', dailyQuote})
+        
         const dailyQuote = data.data[0];
-        res.render('main', {layout : 'index', dailyQuote, filter})
+        const authorQuote = data.data[0];
+        res.render('main', {layout : 'index', dailyQuote, authorQuote, filter})
         });
         // res.render("index", { dailyquote })
 })

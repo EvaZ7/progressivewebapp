@@ -8,10 +8,19 @@
 
   <section id="authors">
     <h2>Famous Authors</h2>
-    <ul></ul>
+    <ul>
+      {{#each filter}}
+      <li> 
+      <a> 
+        <img src="../static/images/person.png"> 
+        <p>{{this.author}}</p> 
+      </a> 
+      </li>
+      {{/each}}
+    </ul>
 
     <h3>Quote</h3>
-    <q>no quote yet</q>
+    <q>{{authorQuote.quote}}</q>
   </section>
 
   <section id="all">
