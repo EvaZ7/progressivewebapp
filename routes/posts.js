@@ -16,8 +16,15 @@ router.get('/', (req, res) => {
       fetchData()
       .then((data) => {
         // console.log(data.data)
-        const filter = data.data;
-        console.log('@@-- filter', filter)
+        let filter = data.data;
+        // console.log('@@-- filter', filter)
+
+        filter.forEach((filterItem, i) => {
+          filter[i].author_link = filterItem.author.replaceAll(" ", "-");
+        });
+
+        console.log(filter);
+        req.session.authors = filter;
         
         const dailyQuote = data.data[0];
         const authorQuote = data.data[0];
@@ -25,5 +32,39 @@ router.get('/', (req, res) => {
         });
         // res.render("index", { dailyquote })
 })
+
+// Create a route for our detail page
+router.get('/detail/:author_link', (req, res) => {
+
+    const requestedAuthor = req.params.author_link
+    let requestedAuthorData = {};
+
+    const fetchedAuthors = req.session.authors;
+    console.log(fetchedAuthors);
+
+    //als je opnieuw gaat fetchen krijg ik andere auteurs dus terug naar home
+    if (!fetchedAuthors) {
+      res.redirect('/');
+      return;
+    }
+
+    //data bij author zoeken en in let requestedAuthorData = {}; zetten
+    fetchedAuthors.forEach((filterItem, i) => {
+      const authorLink = filterItem.author.replaceAll(" ", "-");
+      if (requestedAuthor == authorLink) {
+        console.log('match!');
+        requestedAuthorData = filterItem;
+      }
+    });
+
+    
+    console.log(requestedAuthorData);
+    
+    //requestedAuthorData wordt author
+    res.render('detail', {
+      layout : 'index', author: requestedAuthorData
+    });
+      
+});
 
 module.exports = router
