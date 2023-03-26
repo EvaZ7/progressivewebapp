@@ -18,16 +18,13 @@
       </li>
       {{/each}}
     </ul>
-
-    <h3>Quote</h3>
-    <q>{{authorQuote.quote}}</q>
   </section>
 
   <section id="all">
     <h2>All quotes</h2>
-    <a href="#AZ">a-z</a>
+    <a href="/a-z" id="az">a-z</a>
     <ul>
-      {{#each filter}}
+      {{#each filterquote}}
        <li> <q>{{this.quote}}</q> </li>
       {{/each}}
     </ul>

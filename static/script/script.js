@@ -46,18 +46,18 @@ const menuKnop = document.querySelector("header nav>a");
 // });
 
 // eventlisteners
-refreshButton.addEventListener(
-  "click",
-  function () {
-    location.reload();
-  },
-  false
-);
-
 menuKnop.addEventListener(
   "click",
   function () {
     deNav.classList.toggle("open");
+  },
+  false
+);
+
+refreshButton.addEventListener(
+  "click",
+  function () {
+    location.reload();
   },
   false
 );

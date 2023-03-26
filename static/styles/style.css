@@ -251,7 +251,7 @@ section:nth-of-type(2) ul a {
   border-radius: 1em;
   box-shadow: 0.08em 0em 0.08em 0.07em rgba(102, 152, 152, 0.642);
 }
-section:nth-of-type(2) ul li a:focus {
+section:nth-of-type(2) ul li a:hover{
   filter: invert(1);
   background-color: rgb(233, 232, 230);
   color: rgb(70, 36, 42);
@@ -263,17 +263,6 @@ section:nth-of-type(2) ul a img {
 section:nth-of-type(2) ul a p {
   margin: 0;
   font-size: 0.9em;
-}
-
-/*their quotes*/
-section:nth-of-type(2) q {
-  width: 80vw;
-
-  color: var(--background-green);
-  background-color: var(--headings);
-
-  border-radius: 1em;
-  padding: 0.8em;
 }
 
 /*All quotes*/
@@ -301,7 +290,7 @@ section:last-of-type a {
   color: var(--headings);
   box-shadow: 0.08em 0em 1em 0.1em rgb(102, 152, 152);
 }
-section:last-of-type a:focus {
+section:last-of-type a:hover {
   background-color: var(--headings);
   color: var(--white);
 }
@@ -333,6 +322,38 @@ section:last-of-type ul:last-of-type q {
   color: var(--background-green);
   padding: 0.5em;
 }
+
+/*author quotes*/
+/***************/
+main > h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+main > q {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  padding: 3em;
+}
+main > p {
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  font-size: 1.5em;
+  margin: 0;
+  padding-bottom: 45dvh;
+}
+main > a {
+  position: absolute;
+  padding: 1em;
+  margin: 1em;
+  background-color: var(--headings);
+  color: var(--background-green);
+
+  border-radius: 0.2em;
+}
+
 
 /***********/
 /*animaties*/
@@ -375,4 +396,9 @@ section:last-of-type ul:last-of-type q {
   header nav > a {
     display: none;
   }
+  main > q {
+    padding-left: 15em;
+    padding-right: 15em;
+  }
 }
+
