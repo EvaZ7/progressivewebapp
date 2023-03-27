@@ -16,7 +16,7 @@ With this web-app, you have access to the most amazing quotes. It provides a gen
 - [Wishlist](https://github.com/EvaZ7/progressivewebapp#wishlist)...
 - [Author](https://github.com/EvaZ7/progressivewebapp#author) This project is made by...
 - [Help](https://github.com/EvaZ7/progressivewebapp#help) Where do I find help?
-- [Progress](https://github.com/EvaZ7/progressivewebapp#progress) What did I improve.
+- [Progress](https://github.com/EvaZ7/progressivewebapp#progress) What did I improve?
 - [Sources](https://github.com/EvaZ7/progressivewebapp#sources) APA list with used sources.
 
 ## Use it

@@ -1,0 +1,20 @@
+{  
+    "lang": "en-us",
+    "name": "Amazed app",
+    "description": "An app that gives you amazing quotes!",  
+    "short_name": "Amazed",  
+    "theme_color": "#161719",  
+    "background_color": "#b9dbd5",  
+    "display": "fullscreen",  
+    "orientation": "portrait", 
+    "scope": "/static/",  
+    "start_url": "/static/",
+    "icons": [
+        {
+            "src": "./images/icon.png",
+            "sizes": "600x600",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}
