@@ -26,7 +26,16 @@
 //     }
 //   }
 // };
-
+console.log("hallo")
+window.addEventListener("load", () => {
+  if ("serviceWorker" in navigator) {
+    console.log("Service worker registered!")
+   navigator.serviceWorker.register("/sw.js")
+   .then(function(registration) {
+    return registration.update();
+  })
+ }
+});
 // // …
 
 // registerServiceWorker();

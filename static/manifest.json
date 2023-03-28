@@ -7,8 +7,8 @@
     "background_color": "#b9dbd5",  
     "display": "fullscreen",  
     "orientation": "portrait", 
-    "scope": "/static/",  
-    "start_url": "/static/",
+    "scope": "/",  
+    "start_url": "/",
     "icons": [
         {
             "src": "./images/icon.png",
