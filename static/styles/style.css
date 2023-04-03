@@ -354,7 +354,15 @@ main > a {
   border-radius: 0.2em;
 }
 
-
+/**** offline ***/
+/****************/
+main.offline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100dvh;
+}
 /***********/
 /*animaties*/
 /***********/

@@ -3,7 +3,7 @@
   <section id="daily">
     <h2>Daily quote</h2>
     <q>{{dailyQuote.quote}}</q>
-    <button><img src="../static/images/refresh.png" /></button>
+    <button><img src="../static/images/refresh.png" alt="refresh icon"/></button>
   </section>
 
   <section id="authors">
@@ -12,7 +12,7 @@
       {{#each filter}}
       <li> 
       <a href=/detail/{{this.author_link}}> 
-        <img src="../static/images/person.png"> 
+        <img src="../static/images/person.png" alt="person icon"> 
         <p>{{this.author}}</p> 
       </a> 
       </li>
