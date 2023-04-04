@@ -14,7 +14,7 @@ app.use(session({
   secret: 'mysupersecretkeylol',
   saveUninitialized: true,
   cookie: { maxAge: sessionLength },
-  resave: false
+  resave: true
 }))
 
 app.engine("handlebars", engine());

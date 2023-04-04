@@ -44,7 +44,7 @@ self.addEventListener("fetch", (event) => {
           response ? response : fetchAndCache(event.request, "html-cache")
         )
         .catch((e) => {
-          console.log("test", e)
+          console.log("testing", e)
           return caches
             .open(CACHE_NAME)
             .then((cache) => cache.match("/offline"));
