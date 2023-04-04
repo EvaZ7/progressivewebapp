@@ -85,39 +85,43 @@ Na het gebruik van lighthouse kreeg ik eerst een aantal meldingen:
 - Links are not crawable
 
 Deze heb ik gelijk opgelost door deze toe te voegen.
-Verder heb ik ook een defer toegevoegd aan mijn JavaScript en deze in de hwad gezet van mijn html pagina.
+Verder heb ik ook een defer toegevoegd aan mijn JavaScript en deze in de head gezet van mijn HTML pagina.
 
 **Verdere optimalisatie:**
 
 1. Perceived load speed: how quickly a page can load and render all of its visual elements to the screen.
 
-Ik wil dit graag iplossing door het minifying van mi8jn css aangezien dit toch heet meeste kost kwa page speed.
-
+Ik wil dit graag oplossing door het minifying van mijn CSS aangezien dit toch heet meeste kost qua page speed.
+Dit heb ik gedaan met minify, hiermee kan ik makkelijk mijn HTML, CSS en JavaScript bestanden omzetten naar geminifeerde bestanden zonder spaties etc.
 
 ## Client- server rendering
 
-**In het kort:** Mijn applicatie is gemaakt met NodeJS, dit zorgt ervoor dat ik mijn applicatie server-side kan maken met JavaScript. Dit werk voor mijn app als volgt.
+**In het kort:** Mijn applicatie is gemaakt met Node.js, dit zorgt ervoor dat ik mijn applicatie server-side kan maken met JavaScript. Dit werk voor mijn app als volgt.
 
 1. Ten eerste heb ik alles omgebouwd met Node.js in mijn app.js.
 
-- Dus ik heb een templating engine toegevoegd (handlebars) om mijn data vanuit mijn api in de html te laden.
-- Ik heb met handlebars verschillende views aangemaakt voor mijn verschillende soorten data en partials gecreerd zodat ik niet steeds opniew mijn header en footer hoef te schrijven met html.
-- Ik heb heb alle niet dynamische onderdelen in een public/static map geplaatst deze wordt gebruikt, hieronder valt mijn "basis" javascript voor het manipuleren van elementen zoals buttons etc., mijn afbeeldingen, mijn css en mainfest.json. Deze map spreek ik ook weer aan in mijn app.js.
+- Dus ik heb een templating engine toegevoegd (handlebars) om mijn data vanuit mijn API in de HTML te laden.
+- Ik heb met handlebars verschillende views aangemaakt voor mijn verschillende soorten data en partials gecreëerd zodat ik niet steeds opnieuw mijn header en footer hoef te schrijven met HTML.
+- Ik heb heb alle niet dynamische onderdelen in een public/static map geplaatst deze wordt gebruikt, hieronder valt mijn "basis" JavaScript voor het manipuleren van elementen zoals buttons etc., mijn afbeeldingen, mijn CSS en mainfest.json. Deze map spreek ik ook weer aan in mijn app.js.
 
 2. Router
 
-Ik heb om al mijn code zo overzichtelijk mogelijk te maken alle get en post requests in een apart bestand gezet. Hierin kan ik per pagina data ophalen (functies uitvoeren), manipuleren en sturen naar de client op basis van de route. Dit is een vervanger van mijn hashed router. Ik render hierin dus mijn views vanuit mijn handlebars met de data die ik ook hierin meegeef door middel van variablen. Dit wordt dan naar de client gestuurd. Dit gebruik ik onder andere ook verder voor mijn detail pagina met quotes en mijn a-z filter
+Ik heb om al mijn code zo overzichtelijk mogelijk te maken alle get en post requests in een apart bestand gezet. Hierin kan ik per pagina data ophalen (functies uitvoeren), manipuleren en sturen naar de client op basis van de route. Dit is een vervanger van mijn hashed router. Ik render hierin dus mijn views vanuit mijn handlebars met de data die ik ook hierin meegeef door middel van variabelen. Dit wordt dan naar de client gestuurd. Dit gebruik ik onder andere ook verder voor mijn detail pagina met quotes en mijn a-z filter.
 
 3. Service worker
 
-Ik heb ook een service-worker geïnplementeerd deze zorgt ervoor dat mijn website offline beschikbaar is en tevens ook sneller wordt geladen doordat ik delen van mijn webapplicatie opsla in de cache.
-Deze service workerregistreer ik op basis van het laden van mijn pagina in mijn statische javaScript file. In mijn service worker file zet ik mijn betanden die ik offline wil hebben in de cache en haal ik ze op.
+Ik heb ook een service-worker geïmplementeerd, deze zorgt ervoor dat mijn website offline beschikbaar is en tevens ook sneller wordt geladen doordat ik delen van mijn webapplicatie opsla in de cache.
+Deze service worker registreer ik op basis van het laden van mijn pagina in mijn statische JavaScript file. In mijn service worker file zet ik mijn bestanden die ik offline wil hebben in de cache en haal ik ze op.
 
+## Activity diagram
 
+Om te laten zien hoe mijn service-worker werkt, heb ik een activity-diagram gemaakt die dit ook nog eens visueel uitlegt.
 
+![Frontpage](https://github.com/EvaZ7/Quotes/blob/4b05094b8fa3c4556e8e3799aaa9f918216d75d5/readmeimg/amazed.png)
 
 ## Sources
 
 - https://www.freecodecamp.org/news/how-to-sort-alphabetically-in-javascript/
 - https://api-ninjas.com/
+- https://opensheet.elk.sh/1p7Wnace8KpaIFnATpBcil_KyJ4P8IC8vYIUO8NCfcKc/Quotes
 - Copyright (c) 2021 Communication and Multimedia Design, Amsterdam University of Applied Science

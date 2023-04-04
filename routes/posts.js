@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-const { default: fetchData } = require('../modules/api');
+// const { default: fetchData } = require('../modules/api');
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -109,6 +109,10 @@ router.get('/a-z', (req, res) => {
         res.render('main', {layout : 'index', dailyQuote, filter, filterquote})
         });
 
+});
+
+router.get('*', (req, res) => {
+  res.render('notfound', {layout : 'index'})
 });
 
 router.get('/offline', (req, res) => {
