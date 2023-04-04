@@ -20,7 +20,7 @@ self.addEventListener("install", function (event) {
 console.log("Opened cache");
 
 self.addEventListener("activate", (event) => {
-  console.log("Activating service worker");
+  console.log("Activating service worker -- test");
   event.waitUntil(clients.claim());
 });
 
