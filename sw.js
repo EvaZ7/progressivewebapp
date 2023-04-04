@@ -4,6 +4,7 @@ const urlsToCache = [
   "/static/styles/style.css",
   "/static/images/person.png",
   "/static/images/refresh.png",
+  "/static/images/icon.png",
   "/offline"
 ];
 
