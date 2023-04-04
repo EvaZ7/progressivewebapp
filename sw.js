@@ -1,15 +1,14 @@
 console.log("at the service worker");
 const CACHE_NAME = "my-site-cache-v1";
 const urlsToCache = [
-  "/static/styles/style.css",
+  "/static/styles/style.min.css",
   "/static/images/person.png",
   "/static/images/refresh.png",
   "/static/images/icon.png",
-  "/offline"
+  "/offline",
 ];
 
 self.addEventListener("install", function (event) {
-  // self.skipWaiting();
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
@@ -25,13 +24,13 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-    console.log(event)
-   console.log("Fetch event: ", event.request.url);
+  console.log(event);
+  console.log("Fetch event: ", event.request.url);
   if (isCoreGetRequest(event.request)) {
     console.log("Core get request: ", event.request.url);
     // cache only strategy
     event.respondWith(
-      caches.open(CACHE_NAME).then((cache) => cache.match(event.request.url)) 
+      caches.open(CACHE_NAME).then((cache) => cache.match(event.request.url))
     );
   } else if (isHtmlGetRequest(event.request)) {
     console.log("html get request", event.request.url);
@@ -44,7 +43,7 @@ self.addEventListener("fetch", (event) => {
           response ? response : fetchAndCache(event.request, "html-cache")
         )
         .catch((e) => {
-          console.log("testing", e)
+          console.log("testing", e);
           return caches
             .open(CACHE_NAME)
             .then((cache) => cache.match("/offline"));

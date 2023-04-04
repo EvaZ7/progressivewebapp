@@ -1,6 +1,7 @@
 # Quotes
 
 ![Frontpage](https://github.com/EvaZ7/Quotes/blob/4b05094b8fa3c4556e8e3799aaa9f918216d75d5/readmeimg/amazed.png)
+[✨AMAZED✨](https://amazed.cyclic.app/)
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![license: mit](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/EvaZ7/Blok-tech/blob/main/LICENSE)
@@ -87,6 +88,15 @@ Na het gebruik van lighthouse kreeg ik eerst een aantal meldingen:
 Deze heb ik gelijk opgelost door deze toe te voegen.
 Verder heb ik ook een defer toegevoegd aan mijn JavaScript en deze in de head gezet van mijn HTML pagina.
 
+**Perceived load speed:**
+how quickly a page can load and render all of its visual elements to the screen.
+Load responsiveness:
+how quickly a page can load and execute any required JavaScript code in order for components to respond quickly to user interaction
+
+### Minify
+
+### Cache control
+
 **Verdere optimalisatie:**
 
 1. Perceived load speed: how quickly a page can load and render all of its visual elements to the screen.
@@ -117,7 +127,7 @@ Deze service worker registreer ik op basis van het laden van mijn pagina in mijn
 
 Om te laten zien hoe mijn service-worker werkt, heb ik een activity-diagram gemaakt die dit ook nog eens visueel uitlegt.
 
-![Frontpage](https://github.com/EvaZ7/Quotes/blob/4b05094b8fa3c4556e8e3799aaa9f918216d75d5/readmeimg/amazed.png)
+![Frontpage](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
 
 ## Sources
 
