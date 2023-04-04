@@ -111,9 +111,9 @@ router.get('/a-z', (req, res) => {
 
 });
 
-router.get('*', (req, res) => {
-  res.render('notfound', {layout : 'index'})
-});
+// router.get('*', (req, res) => {
+//   res.render('notfound', {layout : 'index'})
+// });
 
 router.get('/offline', (req, res) => {
   res.render('offline', {layout : 'index'})

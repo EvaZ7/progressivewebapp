@@ -30,7 +30,7 @@ self.addEventListener("fetch", (event) => {
     console.log("Core get request: ", event.request.url);
     // cache only strategy
     event.respondWith(
-      caches.open(CACHE_NAME).then((cache) => cache.match(event.request.url))
+      caches.open(CACHE_NAME).then((cache) => cache.match(event.request.url)) 
     );
   } else if (isHtmlGetRequest(event.request)) {
     console.log("html get request", event.request.url);
