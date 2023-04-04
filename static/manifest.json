@@ -11,7 +11,7 @@
     "start_url": "/",
     "icons": [
         {
-            "src": "/images/icon.png",
+            "src": "./images/icon.png",
             "sizes": "600x600",
             "type": "image/png",
             "purpose": "any"
