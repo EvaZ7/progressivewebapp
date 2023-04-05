@@ -17,7 +17,11 @@ With this web-app, you have access to the most amazing quotes. It provides a gen
 - [Wishlist](https://github.com/EvaZ7/progressivewebapp#wishlist)...
 - [Author](https://github.com/EvaZ7/progressivewebapp#author) This project is made by...
 - [Help](https://github.com/EvaZ7/progressivewebapp#help) Where do I find help?
-- [Progress](https://github.com/EvaZ7/progressivewebapp#progress) What did I improve?
+- [Preformance](https://github.com/EvaZ7/progressivewebapp#preformance) What did I improve?
+- [Load responsiveness](https://github.com/EvaZ7/progressivewebapp#load-responsiveness) Improve interaction time.
+- [Perceived load speed](https://github.com/EvaZ7/progressivewebapp#perceived-load-speed) I made it faster.
+- [Client server rendering](https://github.com/EvaZ7/progressivewebapp#client-server-rendering) Going server-side.
+- [Activity diagram](https://github.com/EvaZ7/progressivewebapp#activity-diagram) Implementing a servive-worker.
 - [Sources](https://github.com/EvaZ7/progressivewebapp#sources) APA list with used sources.
 
 ## Use it
@@ -76,59 +80,71 @@ Credits to me, Eva Zaadnoordijk (500847567) 2023 for Communication and Multimedi
 Are some parts still a bit confusing? Feel free to contact me at:
 _eva.zaadnoordijk.zaadnoordijk@hva.nl_
 
----- 
+----
 
 ## Preformance
 
-Na het gebruik van lighthouse kreeg ik eerst een aantal meldingen:
+After using lighthouse, I first got several notifications:
 
-- Mijn HTML had geen "description" tag
-- Mijn images hadden geen alt-tekst
+- My HTML did not have a "description" tag in the head
+_ My html did not have a "theme color" tag in the head
+- My html did not have an "icon" tag in the head
+- My html did not have a <!DOCTYPE html>...
+- My images had no alt text
 - Links are not crawable
 
-Deze heb ik gelijk opgelost door deze toe te voegen.
-Verder heb ik ook een defer toegevoegd aan mijn JavaScript en deze in de head gezet van mijn HTML pagina.
+I fixed these right away by adding them to change.
 
-**Perceived load speed:**
-how quickly a page can load and render all of its visual elements to the screen.
-Load responsiveness:
-how quickly a page can load and execute any required JavaScript code in order for components to respond quickly to user interaction
+![analysis before improvements](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
+![analysis after improvements](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
 
-### Minify
+### Load responsiveness
 
-### Cache control
+To reduce the interaction time (interaction with JavaScript) after loading the page. I added a "defer" to my JavaScript and put it in the head of my HTML page. This causes the page to render right away and the browser is not going to wait for the JavaScript to finish rendering first.
 
-**Verdere optimalisatie:**
+### Perceived load speed
 
-1. Perceived load speed: how quickly a page can load and render all of its visual elements to the screen.
+**Minify**
 
-Ik wil dit graag oplossing door het minifying van mijn CSS aangezien dit toch heet meeste kost qua page speed.
-Dit heb ik gedaan met minify, hiermee kan ik makkelijk mijn HTML, CSS en JavaScript bestanden omzetten naar geminifeerde bestanden zonder spaties etc.
+I would like to improve this by minifying my static files as this is what costs the most in terms of page speed anyway. I did this with minify, with this I can easily convert my HTML, CSS and JavaScript files to minified files without spaces etc. and often all the code in one line. This makes the code faster to read.
 
-## Client- server rendering
+**Cache control**
 
-**In het kort:** Mijn applicatie is gemaakt met Node.js, dit zorgt ervoor dat ik mijn applicatie server-side kan maken met JavaScript. Dit werk voor mijn app als volgt.
+I have also implemented cache-control to ensure that my files stay in the cache longer and do not have to reload each time. This makes my application faster because there is less to no loading time for the cached files.
 
-1. Ten eerste heb ik alles omgebouwd met Node.js in mijn app.js.
+**The results**
 
-- Dus ik heb een templating engine toegevoegd (handlebars) om mijn data vanuit mijn API in de HTML te laden.
-- Ik heb met handlebars verschillende views aangemaakt voor mijn verschillende soorten data en partials gecreëerd zodat ik niet steeds opnieuw mijn header en footer hoef te schrijven met HTML.
-- Ik heb heb alle niet dynamische onderdelen in een public/static map geplaatst deze wordt gebruikt, hieronder valt mijn "basis" JavaScript voor het manipuleren van elementen zoals buttons etc., mijn afbeeldingen, mijn CSS en mainfest.json. Deze map spreek ik ook weer aan in mijn app.js.
+To test if my page actually is faster, I used lighthouse to run an analysis on this, the results showed that my page did in fact improve it's speed.
+
+![page speed slow](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
+
+![page speed fast](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
+
+
+## Client server rendering
+
+**Summary** My application is made with Node.js, this allows me to make my application server-side with JavaScript. This makes my app work like this now:
+
+1. First, I converted everything with Node.js in my app.js.
+
+- So I added a templating engine (handlebars) to load my data from my API into the HTML.
+- I used handlebars to create different views for my different types of data and created partials so I don't have to keep writing my header and footer with HTML.
+- I have placed all the non dynamic parts in a public/static folder this is used, this includes my "basic" JavaScript for manipulating elements like buttons etc, my images, my CSS and mainfest.json. I also address this folder again in my app.js.
 
 2. Router
 
-Ik heb om al mijn code zo overzichtelijk mogelijk te maken alle get en post requests in een apart bestand gezet. Hierin kan ik per pagina data ophalen (functies uitvoeren), manipuleren en sturen naar de client op basis van de route. Dit is een vervanger van mijn hashed router. Ik render hierin dus mijn views vanuit mijn handlebars met de data die ik ook hierin meegeef door middel van variabelen. Dit wordt dan naar de client gestuurd. Dit gebruik ik onder andere ook verder voor mijn detail pagina met quotes en mijn a-z filter.
+To make all my code as clear as possible, I have put all get and post requests in a separate file. In this I can retrieve data per page (execute functions), manipulate it and send it to the client based on the route. This is a replacement for my hashed router. I render my views from my handlebars with the data that I also give in this file by means of variables. This is then sent to the client. I also use this for my detail page with quotes and my a-z filter.
 
 3. Service worker
 
-Ik heb ook een service-worker geïmplementeerd, deze zorgt ervoor dat mijn website offline beschikbaar is en tevens ook sneller wordt geladen doordat ik delen van mijn webapplicatie opsla in de cache.
-Deze service worker registreer ik op basis van het laden van mijn pagina in mijn statische JavaScript file. In mijn service worker file zet ik mijn bestanden die ik offline wil hebben in de cache en haal ik ze op.
+I also implemented a service worker, it makes my website available when offline and also loads faster by caching parts of my web application.
+I register this service worker based on the loading of my page in my static JavaScript file. In my service worker file, I cache and get and serve my files that I want offline.
 
 ## Activity diagram
 
-Om te laten zien hoe mijn service-worker werkt, heb ik een activity-diagram gemaakt die dit ook nog eens visueel uitlegt.
+To show how my service worker works, I created an activity diagram that visually explains this as well.
 
-![Frontpage](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
+![Activity diagram](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
 
 ## Sources
 
