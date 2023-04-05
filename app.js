@@ -21,6 +21,8 @@ app.use(
     saveUninitialized: true,
     cookie: { maxAge: sessionLength },
     resave: true,
+    // Set-Cookie: flavor=choco; SameSite=None; Secure
+    // SameSite=None
   })
 );
 

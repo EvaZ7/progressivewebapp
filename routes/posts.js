@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
         // console.log(data.data)
 
         // data filteren
-        let filter = data.data;
+        const filter = data.data;
         let filterquote = data.data;
 
         // linkjes maken voor de auteur pagina's

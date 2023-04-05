@@ -33,6 +33,7 @@ My API crashed A LOT for no reason, so I decided to switch to a different API. T
 This application is rendered server-side. Because of the API you will need to have access to it first. In order to do so:
 1. You have to create and account on [API-Ninjas](https://api-ninjas.com/)
 2. Then you will need the API link, which is: ~~[this link](https://api.api-ninjas.com/v1/quotes?category=amazing)~~ [this link](https://opensheet.elk.sh/1p7Wnace8KpaIFnATpBcil_KyJ4P8IC8vYIUO8NCfcKc/Quotes)
+
 ~~3. Add your personal API-key to the link, the key can be found on your personal API-Ninjas account.~~
 3. Read the documentation op the API [here](https://github.com/benborgers/opensheet#readme)
 

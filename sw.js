@@ -5,7 +5,7 @@ const urlsToCache = [
   "/static/images/person.png",
   "/static/images/refresh.png",
   "/static/images/icon.png",
-  "/offline",
+  "/offline"
 ];
 
 self.addEventListener("install", function (event) {
