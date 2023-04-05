@@ -5,7 +5,7 @@ const router = require("./routes/posts");
 const session = require("express-session");
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 const sessionLength = 1000 * 60 * 60 * 24 * 7; // 1 day
 
