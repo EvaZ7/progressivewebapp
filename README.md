@@ -68,7 +68,6 @@ The data source gives you tons and tons of different quotes, the API of API-Ninj
 ## Wishlist
 
 - Design something with more "SPICE"🌶️
-- Work on splitting it more up into modules
 - Making more pages
 
 ## Author
@@ -95,8 +94,8 @@ _ My html did not have a "theme color" tag in the head
 
 I fixed these right away by adding them to change.
 
-![analysis before improvements](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
-![analysis after improvements](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
+![analysis before improvements](https://github.com/EvaZ7/progressivewebapp/blob/7b37d7be894d830e95508c593f4e2d09f5630bcb/readmeimg/beforeanalysis.png)
+![analysis after improvements](https://github.com/EvaZ7/progressivewebapp/blob/7b37d7be894d830e95508c593f4e2d09f5630bcb/readmeimg/afteranalysis.png)
 
 ### Load responsiveness
 
@@ -116,10 +115,9 @@ I have also implemented cache-control to ensure that my files stay in the cache 
 
 To test if my page actually is faster, I used lighthouse to run an analysis on this, the results showed that my page did in fact improve it's speed.
 
-![page speed slow](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
+![page speed slow](https://github.com/EvaZ7/progressivewebapp/blob/7b37d7be894d830e95508c593f4e2d09f5630bcb/readmeimg/pagespeedslow.png)
 
-![page speed fast](https://github.com/EvaZ7/progressivewebapp/blob/0710bf756b9bfc7166d193afaf7aeb826c7ff1b2/readmeimg/activitydiagram.png)
-
+![page speed fast](https://github.com/EvaZ7/progressivewebapp/blob/7b37d7be894d830e95508c593f4e2d09f5630bcb/readmeimg/pagespeedfast.png)
 
 ## Client server rendering
 
